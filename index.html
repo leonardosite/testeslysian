@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" media="screen and (max-width:700px)" href="mobile.css">
     <title>Sítio Elysian Place</title>
 </head>
 <body>
@@ -19,12 +18,13 @@
             height: 100%;
             }
             html{
-                width: 100%;
+                width:700px;
                 height: 100%;
+               overflow-x: hidden;
             }
             #dados,#dados-unico,
             .css-slideshow,
-            #possui,.blocoazul,.redesum{
+            #possui,.blocoazul,.redesum,#folders,#foldersmob{
             display: none;
             transition: 0;
             visibility: hidden;
@@ -35,6 +35,7 @@
             display: flex;
             justify-content: center;
             width: 100%;
+            transform: translateY(0px) translateX(0px);
            }
            nav{
             display: flex;
@@ -258,11 +259,8 @@
             display: flex;
            }
            #foldermob{
-            display: flex;
-            width: 100%;
-            height: 500px;
-            margin-top: 40px;
-            transform: translateX(0px) translateY(-600px);
+            display: none;
+        
            }
            #folders{
             display: none;
@@ -593,11 +591,8 @@
             display: flex;
            }
            #foldermob{
-            display: flex;
-            width: 100%;
-            height: 500px;
-            margin-top: 40px;
-            transform: translateX(0px) translateY(-600px);
+            display: none;
+           
            }
            #folders{
             display: none;
@@ -612,7 +607,7 @@
             justify-content: center;
             width: 100%;
             background-color: #175ED4;
-            transform: translateX(0px) translateY(-1700px) ;
+            transform: translateX(0px) translateY(-1300px) ;
            }
            #titulomapafinal{
             display: flex;
@@ -678,8 +673,8 @@
      
   
         }
-
     </style>
+
 
     <img src="icones/whatsfixo.png" id="whatsfixo">
     <div class="blocoazul"></div>
@@ -687,21 +682,21 @@
 
 
     <header >
- 
-      
         <nav class="aqui" >
          
             <img src="logo.png" id="logotipo">
-            <a href="" id="dados">Início</a>
-            <a href="" id="dados">Sobre</a>
-            <a href="" id="dados">Comodidades</a>
-            <a href="" id="dados">Eventos</a>
-            <a href="" id="dados">Localização</a>
-            <a href="" id="dados-unico">Fale Conosco</a>
+            <a href="#menu" id="dados">Início</a>
+            <a href="#tituloesquerdo" id="dados">Sobre</a>
+            <a href="#piscina-titulo" id="dados">Comodidades</a>
+            <a href="#titulo-eventos" id="dados">Eventos</a>
+            <a href="#titulomapafinal" id="dados">Localização</a>
+     
+            <a href="https://api.whatsapp.com/send?phone=5511942903148" id="dados-unico">Fale Conosco</a>
+         
+
             <i class="fa-solid fa-bars" id="menu"></i>
         
         </nav>
-
         <script>
             
             const menu = document.querySelector('.aqui');
@@ -714,7 +709,14 @@
             window.addEventListener('scroll', ativarscroll) ;
         
         </script>
+
     </header>
+
+
+
+   
+
+
 
     <main>
         <article class="fundo-titulo">
@@ -769,7 +771,7 @@
     
               <!--IMAGEM 4-->
         <figure>
-                <img class="imgcarro" src="piscina/3.jpg" alt="class-header-connectivity" width="995" height="570" class="alignnone size-large wp-image-176" /><figcaption>
+                <img class="imgcarro" src="https://thumbs2.imgbox.com/c8/d5/ipWZCBr5_t.jpg" alt="class-header-connectivity" width="995" height="570" class="alignnone size-large wp-image-176" /><figcaption>
                     <strong>Jardinagem</strong><br>
                     Jardim bem cuidado e florescido.
                 </figcaption> 
@@ -777,7 +779,7 @@
     
                  <!--IMAGEM 5-->
             <figure>
-                <img class="imgcarro" src="casa/3.jpg" width="995" height="570" class="alignnone size-large wp-image-175" />
+                <img class="imgcarro" src="" width="995" height="570" class="alignnone size-large wp-image-175" />
                 <figcaption><strong>Casa</strong><br> 
                     Quartos,Cozinha,Banheiros e Sala limpos e planejados para um bom uso. 
                 </figcaption> 
@@ -785,7 +787,7 @@
     
                  <!--IMAGEM 6-->
             <figure>
-                <img  class="imgcarro" src="casa/57.jpg" alt="class-header-3d" width="995" height="570" class="alignnone size-large wp-image-174" />
+                <img  class="imgcarro" src="https://thumbs2.imgbox.com/18/82/90yaX6jU_t.jpg" alt="class-header-3d" width="995" height="570" class="alignnone size-large wp-image-174" />
                 <figcaption><strong>Ambientação</strong><br>
                     Ambiente com campos,jogos e lazer.
             </figcaption> 
@@ -793,7 +795,7 @@
     
                  <!--IMAGEM 7-->
             <figure>
-                <img class="imgcarro" src="piscina/2.jpg" alt="class-header-performance" width="995" height="570" class="alignnone size-large wp-image-173" />
+                <img class="imgcarro" src="https://thumbs2.imgbox.com/c8/d5/ipWZCBr5_t.jpg" alt="class-header-performance" width="995" height="570" class="alignnone size-large wp-image-173" />
                 <figcaption><strong>Piscina e Jardinagem</strong><br>
                   Piscina semiolímpica de 1 á 2 metros de profundidade.
                 </figcaption> 
@@ -823,14 +825,10 @@
         </article>
 
         <div class="container">
-            <img src="casa/58.jpg" id="imagemcont1">
-            <img src="casa/1.jpg"  id="imagemcont1">
-            <img src="casa/5.jpg"id="imagemcont1">
-            <img src="casa/4.jpg"id="imagemcont1">
-            <img src="piscina/1.jpg"id="imagemcont1">
-            <img src="casa/12.jpg" id="imagemcont1">
-            <img src="piscina/2.jpg" id="imagemcont1">
-            <img src="casa/35.jpg" id="imagemcont1">
+            <img src="1-min.jpg"  id="imagemcont1">
+            <img src="2.jpg"id="imagemcont1">
+            <img src="3.jpg"id="imagemcont1">
+            <img src="5.jpg"id="imagemcont1">
           </div>
 
         <article class="fundo-paragrafoum">
@@ -910,11 +908,13 @@
         </article>
 
         <div class="container1">
-                <img src="piscina/1.jpg"  id="img-container1">
-                <img src="piscina/2.jpg"  id="img-container1">
-                <img src="piscina/3.jpg"  id="img-container1">
-                <img src="piscina/4.jpeg" id="img-container1">
-                <img src="piscina/5.jpeg" id="img-container1">
+                <img src="https://thumbs2.imgbox.com/69/41/lung5xCZ_t.jpeg"  id="img-container1">
+                <img src="https://thumbs2.imgbox.com/c8/d5/ipWZCBr5_t.jpg "  id="img-container1">
+                <img src="https://thumbs2.imgbox.com/c0/25/DAkPoIXU_t.jpg"  id="img-container1">
+                <img src="https://thumbs2.imgbox.com/1a/11/e0e2CL5B_t.jpg" id="img-container1">
+                <img src="https://thumbs2.imgbox.com/9e/04/K7keZXCe_t.jpg " id="img-container1">
+                <img src="https://thumbs2.imgbox.com/18/82/90yaX6jU_t.jpg " id="img-container1">
+                <img src="https://thumbs2.imgbox.com/c8/d5/ipWZCBr5_t.jpg  " id="img-container1">
         </div>
 
         </article>
@@ -922,20 +922,20 @@
         <article class="bloco-campos">
 
             <div class="texto-campos">
-                    <li id="campos-titulo">Arquitetura e Lazer</li>
+                    <li id="campos-titulo">Churascaria e Jogos</li>
             </div>
     
             <article class="fundo-icone-campos">
-                    <p id="texto-icone-campos"><i class="fa-solid fa-person-swimming" id="campos-icone"></i>Piscina Paraolímpica</p>
-                    <p id="texto-icone-campos"><i class="fa-solid fa-person-drowning" id="campos-icone"></i>De 1 até 2 metros de produndidade</p>
+                    <p id="texto-icone-campos"><i class="fa-solid fa-dice" id="campos-icone"></i>3 Jogos de Mesa e <br>Campo de Futebol</p>
+                    <p id="texto-icone-campos"><i class="fa-solid fa-utensils" id="campos-icone"></i></i></i>Churrascaria Adequada</p>
             </article>
     
             <div class="container2">
-                    <img src="piscina/1.jpg"  id="img-container2">
-                    <img src="piscina/2.jpg"  id="img-container2">
-                    <img src="piscina/3.jpg"  id="img-container2">
-                    <img src="piscina/4.jpeg" id="img-container2">
-                    <img src="piscina/5.jpeg" id="img-container2">
+                    <img src="https://thumbs2.imgbox.com/4c/2f/mT3bjrzu_t.jpg"  id="img-container2">
+                    <img src="https://thumbs2.imgbox.com/16/7a/YmBA3Cjv_t.jpg"  id="img-container2">
+                    <img src="https://thumbs2.imgbox.com/88/64/qLBmgCQZ_t.jpg"  id="img-container2">
+                    <img src="https://thumbs2.imgbox.com/8f/f3/quCAkgQ0_t.jpg" id="img-container2">
+                    <img src="https://thumbs2.imgbox.com/7b/e5/Gt50xVDB_t.jpg" id="img-container2">
             </div>
     
         </article>
@@ -947,16 +947,15 @@
             </div>
     
             <article class="fundo-icone-area">
-                    <p id="texto-icone-area"><i class="fa-solid fa-person-swimming" id="area-icone"></i>Piscina Paraolímpica</p>
-                    <p id="texto-icone-area"><i class="fa-solid fa-person-drowning" id="area-icone"></i>De 1 até 2 metros de produndidade</p>
+                    <p id="texto-icone-area"><i class="fa-solid fa-house" id="area-icone"></i>13 Comodos, 2 andares</p>
+                    <p id="texto-icone-area"><i class="fa-brands fa-pagelines" id="area-icone"></i>Plantações e Flores</p>
             </article>
     
             <div class="container3">
-                    <img src="piscina/1.jpg"  id="img-container3">
-                    <img src="piscina/2.jpg"  id="img-container3">
-                    <img src="piscina/3.jpg"  id="img-container3">
-                    <img src="piscina/4.jpeg" id="img-container3">
-                    <img src="piscina/5.jpeg" id="img-container3">
+                    <img src="https://thumbs2.imgbox.com/60/24/b0VR8g7v_t.jpg"  id="img-container3">
+                    <img src="https://thumbs2.imgbox.com/22/e8/YzRTFvNH_t.jpg "  id="img-container3">
+                    <img src="https://thumbs2.imgbox.com/3e/66/LbmpCE3Z_t.jpg "  id="img-container3">
+                    <img src="https://thumbs2.imgbox.com/54/15/YrRtVYXz_t.jpg " id="img-container3">
             </div>
     
         </article>
@@ -968,16 +967,14 @@
             </div>
     
             <article class="fundo-icone-jardim">
-                    <p id="texto-icone-jardim"><i class="fa-solid fa-person-swimming" id="jardim-icone"></i>Piscina Paraolímpica</p>
-                    <p id="texto-icone-jardim"><i class="fa-solid fa-person-drowning" id="jardim-icone"></i>De 1 até 2 metros de produndidade</p>
+                    <p id="texto-icone-jardim"><i class="fa-solid fa-broom" id="jardim-icone"></i>Manter o Ambiente Limpo</p>
+                    <p id="texto-icone-jardim"><i class="fa-solid fa-trash" id="jardim-icone"></i>De 1 até 2 metros de produndidade</p>
             </article>
     
             <div class="container4">
-                    <img src="piscina/1.jpg"  id="img-container4">
-                    <img src="piscina/2.jpg"  id="img-container4">
-                    <img src="piscina/3.jpg"  id="img-container4">
-                    <img src="piscina/4.jpeg" id="img-container4">
-                    <img src="piscina/5.jpeg" id="img-container4">
+                    <img src="https://thumbs2.imgbox.com/52/b1/oAYf5TKy_t.jpg"  id="img-container4">
+                    <img src="https://thumbs2.imgbox.com/ce/f0/lKuuZcmo_t.jpg"  id="img-container4">
+                    <img src="https://thumbs2.imgbox.com/e7/ab/QRgbZwXE_t.jpeg" id="img-container4">
             </div>
     
         </article>
@@ -1009,11 +1006,11 @@
 
 
         <div class="container5">
-                <img src="piscina/1.jpg"  id="img-container5">
-                <img src="piscina/2.jpg"  id="img-container5">
-                <img src="piscina/3.jpg"  id="img-container5">
-                <img src="piscina/4.jpeg" id="img-container5">
-                <img src="piscina/5.jpeg" id="img-container5">
+                <img src="https://thumbs2.imgbox.com/03/58/oCH85SZe_t.jpg"  id="img-container5">
+                <img src="62.jpg"  id="img-container5">
+                <img src="48.jpg"  id="img-container5">
+                <img src="https://thumbs2.imgbox.com/8c/0f/gd7fn8fb_t.jpg" id="img-container5">
+                <img src="https://thumbs2.imgbox.com/de/e9/MzatWOa6_t.jpg" id="img-container5">
         </div>
 
         <article class="detalhes-15anos">
@@ -1024,10 +1021,10 @@
     </section>
 
     <section class="fundo-banners">
-        <img src="folders/janeiro2.jpg" id="foldermob">
-        <img src="folders/janeiro2.jpg" id="foldermob">
-        <img src="folders/janeiro2.jpg" id="folders">
-        <img src="folders/janeiro2.jpg" id="folders">
+        <img src="https://thumbs2.imgbox.com/07/e9/EkWyFWqX_t.jpg" id="foldermob">
+        <img src="https://thumbs2.imgbox.com/0f/82/NRTwJCva_t.jpg" id="foldermob">
+        <img src="Desktop.jpg" id="folders" >
+        <img src="Desktop2.jpg" id="folders">
         <video src="video.mp4" id="video" controls autoplay muted></video>
     </section>
 
@@ -1113,7 +1110,7 @@
 
 
     
-    <script src="carrossel1.js"></script>
+    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/266015c250.js" crossorigin="anonymous"></script>
 
 </body>
