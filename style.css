@@ -1,4 +1,4 @@
-#menu,#foldermob{
+#menu,#foldermob,.fundo-menumob,#fechar-menumob{
   display: none;
 }
 body{
@@ -15,7 +15,7 @@ html{
 #whatsfixo{
     position: fixed;
     z-index: 2;
-    transform: scale(0.1) translateX(-3100px) translateY(3000px);
+    transform: scale(0.1) translateX(-3100px) translateY(2000px);
 }
 header{
     display: flex;

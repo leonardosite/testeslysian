@@ -36,24 +36,101 @@
             justify-content: center;
             width: 100%;
             transform: translateY(0px) translateX(0px);
+          
            }
            nav{
             display: flex;
             justify-content: space-between;
             width: 100%;
+            height: 55px;
+            padding: 10px;
            }
            #logotipo{
             padding: 10px;
             transform: translateX(20px);
            }
+
+
+           .fundo-menumob{
+            display: flex;
+            position: absolute;      
+            justify-content: space-between;
+            flex-wrap: wrap;
+            height: 1000px;
+            width: 100%;
+            transform: translateY(460px) translateX(4000px);
+            background-color: #175ED4;
+            padding: 20px;
+            z-index: 4;
+            margin-left: -20px;  
+            overflow: auto;     
+            transition: 2s;          
+           }
+           .ativar-menumob{
+
+            transform: translateX(0px) translateY(460px);
+           }
+           #fechar-menumob{
+            display: flex;
+            justify-content: left;
+            color: white;
+            font-size: 52px;
+            font-weight: bold;
+            padding: 10px;
+            width: 40%;
+            height: 55px;
+           }
            #menu{
             display: flex;
+            justify-content: right;
             padding: 10px;
             font-size: 52px;
             font-weight: bold;
             color: white;
-            transform: translateX(-40px);
+            width: 40%;
+            height: 55px;
+            position: relative;
+            overflow: hidden;
            }
+           .fundo-listamenumob{
+            display: flex;
+            overflow-y: auto;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px;
+            margin-left: -20px;
+            margin-top: -250px;
+            overflow-y: scroll;
+
+      
+        
+           }
+           #redes-menumob{
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            padding: 10px;
+            font-size: 24px;
+            color: white;
+            border-bottom: 1px solid #eeeeef;
+
+           }
+           #icon-mobmenu{
+            font-size: 40px;
+            margin: 10px;
+           }
+           .botao-menumob{
+            display: flex;
+            background-color: #08409b;
+            font-size: 35px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            color: white;
+            border-radius: 50px;
+            padding: 20px;
+           }
+     
            main{
             width: 100%;
             transform: translateY(-45px)
@@ -690,11 +767,26 @@
             <a href="#piscina-titulo" id="dados">Comodidades</a>
             <a href="#titulo-eventos" id="dados">Eventos</a>
             <a href="#titulomapafinal" id="dados">Localização</a>
-     
+            <i class="fa-solid fa-bars" id="menu"></i>
             <a href="https://api.whatsapp.com/send?phone=5511942903148" id="dados-unico">Fale Conosco</a>
          
 
-            <i class="fa-solid fa-bars" id="menu"></i>
+            <div class="fundo-menumob">    
+                <i class="fa-solid fa-circle-xmark" id="fechar-menumob"></i>        
+                <i class="fa-solid fa-bars" ></i>
+              
+                <div class="fundo-listamenumob">
+                <p id="redes-menumob"><i class="fa-brands fa-whatsapp" id="icon-mobmenu"></i>(11) 95375-8405</p>
+                <p id="redes-menumob"><i class="fa-brands fa-facebook" id="icon-mobmenu"></i> Elysian Place</p>
+                <p id="redes-menumob"><i class="fa-brands fa-instagram" id="icon-mobmenu"></i> Elysian Place</p>
+                <p id="redes-menumob"><i class="fa-solid fa-envelope" id="icon-mobmenu"></i>Elysianplace07@gmail.com </p>
+                <a href="" class="botao-menumob">Fale Conosco</a>  
+            </div>
+                
+            </div>
+
+
+
         
         </nav>
         <script>
