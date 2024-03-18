@@ -1,3 +1,5 @@
+window.alert('Ola ! Bem Vindo ao Site Da Elysian Place')
+
 let redes = document.querySelector('#dados-unico');
 
 redes.addEventListener('mouseover', function(){
